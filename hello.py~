@@ -1,0 +1,14 @@
+
+import bottle
+
+# this is the handler for the default path of the web server
+
+@bottle.route('/')
+def hello():
+    return '<b>Hello World!</b>'
+
+@bottle.route('/test')
+def test_index():
+	return "test page"
+
+bottle.run(host='localhost', port=8080)
